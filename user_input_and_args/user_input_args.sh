@@ -22,6 +22,16 @@
 # done
 
 #Default Values for Arguments
+# #!/bin/bash
+# name=${1:-"Guest"}
+# echo "hello $name"
+
+##ask age
 #!/bin/bash
-name=${1:-"Guest"}
-echo "hello $name"
+echo "Enter age:"
+read age
+if [ "$age" -gt "18" ]; then
+    echo "you are an adult"
+else
+    echo "you are minor"
+fi

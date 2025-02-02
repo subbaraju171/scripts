@@ -1,0 +1,2 @@
+Hello, DevOps Rockers!
+This is a Bash scripting tutorial.
