@@ -1,7 +1,9 @@
 #!/bin/bash
-cluster="prod-eks"
-if [ "$cluster" == "prod-eks" ] || [ "$cluster" == "preprod" ]; then
-    echo "cluster is  prod-eks"
+cluster="prod-eks"  # Corrected syntax for variable assignment
+
+if [ "$cluster" == "prod-eks" ] || [ "$cluster" == "preprod-eks" ]; then
+    deploy_con=true 
+    echo "Can be deployed. Server deploy status: $deploy_con"
 else
-    echo "cluster is preprod"
+    echo "Cannot be deployed"
 fi

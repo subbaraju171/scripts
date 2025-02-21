@@ -1,16 +1,25 @@
 #!/bin/bash
-colour="blue"
-case $colour in
-    "red")
-        echo "colour is red"
+read branch
+case $branch in
+    "dev")
+        echo "branch is dev"
+        build=true
+        test=true
+        deploy=true
+        echo "Can build $build"
         ;;
-    "blue")
-        echo "colour is blue"
+    "qa")
+        echo "branch is qa"
+        build=false
+        test=true
+        deploy=true
+        echo "Can build $build"
         ;;
-    "green")
-        echo "colour is green"
-        ;;
-    "*")
-        echo "unkown colour"
+    "master")
+        echo "branch is master"
+        build=false
+        test=false
+        deploy=true
+        echo "Can deploy $deploy"
         ;;
 esac
